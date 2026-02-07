@@ -1,6 +1,6 @@
 # TehRobot Unraid Templates
 
-Docker container templates for Unraid Community Applications.
+Docker container templates for Unraid (6.10.0-rc1 and newer).
 
 ## Available Templates
 
@@ -8,18 +8,35 @@ Docker container templates for Unraid Community Applications.
 |-----------|-------------|
 | [media-optimizer](https://github.com/TehRobot-Assistant/media-optimizer) | Analyze Sonarr/Radarr libraries for space hogs and codec upgrades |
 
-## Installation
+## Installation (Unraid 6.10+)
 
-### Add as Template Repository
+> **Note:** Template Repositories have been removed in Unraid 6.10.0-rc1. Use one of the methods below instead.
 
-1. Go to **Apps** → **Settings** (gear icon)
-2. Under **Template Repositories**, add:
+### Option A: Community Applications (Recommended)
+
+1. Download the template XML file
+2. Save to your flash drive:
    ```
-   https://github.com/TehRobot-Assistant/unraid-templates
+   /boot/config/plugins/community.applications/private/<container-name>/<container-name>.xml
    ```
-3. Click **Save** and **Force Update**
+3. Go to **Apps** → find it under the **Private** category
+4. Click **Install**
 
-The templates will now appear in Community Applications.
+### Option B: Docker Tab
+
+1. Download the template XML file
+2. Save to your flash drive:
+   ```
+   /boot/config/plugins/dockerMan/templates-user/<container-name>.xml
+   ```
+3. Go to **Docker** → **Add Container**
+4. Select the template from the dropdown
+
+## Template Downloads
+
+| Container | XML Template |
+|-----------|--------------|
+| media-optimizer | [Download](https://raw.githubusercontent.com/TehRobot-Assistant/unraid-templates/main/media-optimizer/media-optimizer.xml) |
 
 ## Support
 
