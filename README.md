@@ -7,6 +7,7 @@ Docker container templates for Unraid (6.10.0-rc1 and newer).
 | Container | Description |
 |-----------|-------------|
 | [media-optimizer](https://github.com/TehRobot-Assistant/media-optimizer) | Analyze Sonarr/Radarr libraries for space hogs and codec upgrades |
+| [game-server-panel](https://github.com/TehRobot-Assistant/game-server-panel) | Simple web panel to start/stop/restart Docker game servers |
 
 ## Installation (Unraid 6.10+)
 
@@ -37,6 +38,7 @@ Docker container templates for Unraid (6.10.0-rc1 and newer).
 | Container | XML Template |
 |-----------|--------------|
 | media-optimizer | [Download](https://raw.githubusercontent.com/TehRobot-Assistant/unraid-templates/main/media-optimizer/media-optimizer.xml) |
+| game-server-panel | [Download](https://raw.githubusercontent.com/TehRobot-Assistant/unraid-templates/main/game-server-panel/game-server-panel.xml) |
 
 ## Support
 

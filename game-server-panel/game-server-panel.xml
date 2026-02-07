@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>game-server-panel</Name>
+  <Repository>ghcr.io/tehrobot-assistant/game-server-panel:latest</Repository>
+  <Registry>https://github.com/TehRobot-Assistant/game-server-panel/pkgs/container/game-server-panel</Registry>
+  <Branch>
+    <Tag>latest</Tag>
+    <TagDescription>Latest stable release</TagDescription>
+  </Branch>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/TehRobot-Assistant/game-server-panel/issues</Support>
+  <Project>https://github.com/TehRobot-Assistant/game-server-panel</Project>
+  <Overview>Simple web panel to let users start, stop, and restart their Docker game servers.[br][br]No complex setup, no Docker-in-Docker — just connects to your existing Docker socket. Each user only sees their assigned containers.[br][br]Create a config.json with users and their allowed containers, then share the login URL with friends.[br][br][b]Source:[/b] https://github.com/TehRobot-Assistant/game-server-panel</Overview>
+  <Category>Tools: GameServers:Management</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <Icon>https://raw.githubusercontent.com/TehRobot-Assistant/game-server-panel/main/icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <DonateText/>
+  <DonateLink/>
+  <Description>Simple web panel to start/stop/restart Docker game servers. Per-user access control with login authentication.</Description>
+  <Config Name="Web UI Port" Target="3000" Default="3000" Mode="tcp" Description="Port for the web interface" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="Config Path" Target="/config" Default="/mnt/user/appdata/game-server-panel" Mode="rw" Description="Path to config.json" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/game-server-panel</Config>
+  <Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="ro" Description="Docker socket (read-only)" Type="Path" Display="always" Required="true" Mask="false">/var/run/docker.sock</Config>
+  <Config Name="Session Secret" Target="SESSION_SECRET" Default="" Mode="" Description="Random string for session encryption" Type="Variable" Display="always" Required="true" Mask="true"/>
+</Container>
