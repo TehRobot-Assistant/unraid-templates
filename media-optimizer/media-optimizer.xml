@@ -15,7 +15,7 @@
   <Overview>Analyze your Sonarr and Radarr libraries to identify space hogs and codec upgrade candidates.[br][br]Connect to your existing Sonarr/Radarr instances using their API keys. View total space usage, average file sizes, sort by MB/minute, codec, resolution, and year. Export data as CSV or JSON.[br][br]Your API keys stay in your browser - never sent to external servers.[br][br][b]Source:[/b] https://github.com/TehRobot-Assistant/media-optimizer</Overview>
   <Category>Tools: MediaServer:Other</Category>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
-  <Icon>https://raw.githubusercontent.com/TehRobot-Assistant/media-optimizer/main/public/logo-2d.png</Icon>
+  <Icon>https://raw.githubusercontent.com/TehRobot-Assistant/media-optimizer/main/icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <DonateText/>

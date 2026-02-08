@@ -15,7 +15,7 @@
   <Overview>Manage Docker containers remotely with secure login and user permissions.[br][br]Features:[br]- Secure login with user authentication[br]- Per-user container assignments[br]- Container groups for quick assignment[br]- Admin panel for user/group management[br]- Auto-discovers Docker containers[br]- Mobile-friendly UI[br][br]Default login: admin / admin (change after first login!)[br][br][b]Source:[/b] https://github.com/TehRobot-Assistant/docker-manager</Overview>
   <Category>Tools: Docker:Management</Category>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
-  <Icon>https://raw.githubusercontent.com/TehRobot-Assistant/docker-manager/main/icon.png</Icon>
+  <Icon>https://raw.githubusercontent.com/TehRobot-Assistant/docker-manager/master/icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <DonateText/>
