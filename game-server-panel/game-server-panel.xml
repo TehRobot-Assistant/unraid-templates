@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>game-server-panel</Name>
+  <Name>docker-manager</Name>
   <Repository>ghcr.io/tehrobot-assistant/game-server-panel:latest</Repository>
   <Registry>https://github.com/TehRobot-Assistant/game-server-panel/pkgs/container/game-server-panel</Registry>
   <Branch>
