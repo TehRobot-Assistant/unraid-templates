@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <Container version="2">
   <Name>media-optimizer</Name>
-  <Repository>ghcr.io/tehrobot-assistant/media-optimizer:latest</Repository>
-  <Registry>https://github.com/TehRobot-Assistant/media-optimizer/pkgs/container/media-optimizer</Registry>
+  <Repository>tehrobot/media-optimizer:latest</Repository>
+  <Registry>https://hub.docker.com/r/tehrobot/media-optimizer</Registry>
   <Branch>
     <Tag>latest</Tag>
     <TagDescription>Latest stable release</TagDescription>
@@ -12,15 +12,31 @@
   <Privileged>false</Privileged>
   <Support>https://github.com/TehRobot-Assistant/media-optimizer/issues</Support>
   <Project>https://github.com/TehRobot-Assistant/media-optimizer</Project>
-  <Overview>Analyze your Sonarr and Radarr libraries to identify space hogs and codec upgrade candidates.[br][br]Connect to your existing Sonarr/Radarr instances using their API keys. View total space usage, average file sizes, sort by MB/minute, codec, resolution, and year. Export data as CSV or JSON.[br][br]Your API keys stay in your browser - never sent to external servers.[br][br][b]Source:[/b] https://github.com/TehRobot-Assistant/media-optimizer</Overview>
+  <Overview>Analyse your Sonarr and Radarr libraries to find&#13;
+space wasters, codec upgrade candidates, and&#13;
+optimisation opportunities.&#13;
+&#13;
+Features:&#13;
+- Connect to Sonarr and Radarr using their API keys&#13;
+- View total library size, average file sizes,&#13;
+  and quality breakdown&#13;
+- Sort by size, MB/minute, codec, resolution, and year&#13;
+- Identify large files with inefficient codecs&#13;
+  (h264 vs HEVC)&#13;
+- Export data as CSV or JSON for further analysis&#13;
+- API keys stay in your browser — never sent to&#13;
+  external servers&#13;
+&#13;
+Enter your Sonarr/Radarr URL and API key directly&#13;
+in the web UI to get started.</Overview>
   <Category>Tools: MediaServer:Other</Category>
   <WebUI>http://[IP]:[PORT:3000]</WebUI>
   <Icon>https://raw.githubusercontent.com/TehRobot-Assistant/media-optimizer/main/icon.png</Icon>
   <ExtraParams/>
   <PostArgs/>
-  <DonateText/>
-  <DonateLink/>
-  <Description>Analyze your Sonarr and Radarr libraries to identify space hogs and codec upgrade candidates. Sort by size, MB/minute, codec, resolution. Export to CSV/JSON.</Description>
+  <DonateText>If you like my work, please consider a donation!</DonateText>
+  <DonateLink>https://buy.stripe.com/fZe6p67wT53E6NGaEE</DonateLink>
+  <Description>Analyze your Sonarr and Radarr libraries to identify space hogs and codec upgrade candidates.</Description>
   <Config Name="Web UI Port" Target="3000" Default="3000" Mode="tcp" Description="Port for the web interface" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
   <Config Name="Appdata" Target="/app/data" Default="/mnt/user/appdata/media-optimizer" Mode="rw" Description="Application data storage" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/media-optimizer</Config>
   <Config Name="Date Format" Target="DATE_FORMAT" Default="US" Mode="" Description="Date format: US (MM/DD/YYYY) or UK (DD/MM/YYYY)" Type="Variable" Display="always" Required="false" Mask="false">US</Config>
