@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>restorerunner</Name>
+  <Repository>tehrobot/restorerunner:beta</Repository>
+  <Registry>https://hub.docker.com/r/tehrobot/restorerunner</Registry>
+  <Branch>
+    <Tag>beta</Tag>
+    <TagDescription>Pre-release beta (rolling)</TagDescription>
+  </Branch>
+  <Branch>
+    <Tag>0.1.0-beta</Tag>
+    <TagDescription>Pinned 0.1.0 beta</TagDescription>
+  </Branch>
+  <Network>bridge</Network>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/TehRobot-Assistant/restore-runner/issues</Support>
+  <Project>https://github.com/TehRobot-Assistant/restore-runner</Project>
+  <Overview>Automated backup restore rehearsal — proves your backup is still&#13;
+restorable, not just that the job ran.&#13;
+&#13;
+PRE-RELEASE BETA. Actively testing; report issues on GitHub.&#13;
+&#13;
+How it works:&#13;
+- Enrol a Restic / Borg / Kopia repo; RestoreRunner walks your live&#13;
+  source and records a baseline snapshot (file paths, sizes, mtimes,&#13;
+  SHA-256 hashes).&#13;
+- On a schedule (weekly default), it samples files from the baseline,&#13;
+  pulls them from the backup, hashes them, and compares bit-for-bit.&#13;
+- Alerts via Apprise (ntfy, Gotify, Discord, Telegram, 110+ channels).&#13;
+&#13;
+Unlike 'restic check' or 'kopia verify', this answers the question:&#13;
+'if I had to restore right now, would the files actually come back&#13;
+bit-for-bit identical to the source?'.&#13;
+&#13;
+Setup (one-off after first start):&#13;
+1. Edit /etc/restorerunner/config.yml (add repos)&#13;
+2. Generate auth hash: read -rs PW; echo -n "$PW" | docker exec -i&#13;
+   restorerunner /usr/local/bin/restorerunner hashpw&#13;
+3. Enrol each repo: docker exec -i restorerunner&#13;
+   /usr/local/bin/restorerunner enroll --config&#13;
+   /etc/restorerunner/config.yml &lt;name&gt;</Overview>
+  <Category>Backup: Tools: Productivity:</Category>
+  <WebUI>http://[IP]:[PORT:8920]</WebUI>
+  <Icon>https://raw.githubusercontent.com/TehRobot-Assistant/restore-runner/main/icon.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <DonateText>If you like this, please consider a donation!</DonateText>
+  <DonateLink>https://buy.stripe.com/fZe6p67wT53E6NGaEE</DonateLink>
+  <Description>Automated backup restore rehearsal for Restic, Borg, and Kopia. Periodically pulls a random sample of files from your backup, hashes them, and proves they match the source. PRE-RELEASE BETA.</Description>
+  <Config Name="Web UI Port" Target="8920" Default="8920" Mode="tcp" Description="Port for the web interface" Type="Port" Display="always" Required="true" Mask="false">8920</Config>
+  <Config Name="Config" Target="/etc/restorerunner" Default="/mnt/user/appdata/restorerunner/config" Mode="ro" Description="config.yml and any password files (must be chmod 600)" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/restorerunner/config</Config>
+  <Config Name="Data" Target="/var/lib/restorerunner" Default="/mnt/user/appdata/restorerunner/data" Mode="rw" Description="SQLite database with enrollment baselines and rehearsal history" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/restorerunner/data</Config>
+  <Config Name="Backup source (read-only)" Target="/mnt/user/data" Default="/mnt/user/data" Mode="ro" Description="One of the source trees your backups cover. Add more mounts as needed (same for each additional tree)." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/data</Config>
+  <Config Name="Backup repository (read-only)" Target="/mnt/user/backup/restic" Default="/mnt/user/backup/restic" Mode="ro" Description="Your Restic/Borg/Kopia repository. Duplicate this row for each repo." Type="Path" Display="always" Required="false" Mask="false">/mnt/user/backup/restic</Config>
+  <Config Name="Timezone" Target="TZ" Default="Pacific/Auckland" Mode="" Description="Container timezone (used for cron scheduling of rehearsals)" Type="Variable" Display="always" Required="false" Mask="false">Pacific/Auckland</Config>
+</Container>
