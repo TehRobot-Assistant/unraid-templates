@@ -9,7 +9,7 @@ Docker container templates for Unraid Community Applications.
 | [docker-manager](https://github.com/TehRobot-Assistant/docker-manager) | Manage Docker containers remotely with secure login and user permissions | [tehrobot/docker-manager](https://hub.docker.com/r/tehrobot/docker-manager) |
 | [media-optimizer](https://github.com/TehRobot-Assistant/media-optimizer) | Analyse Sonarr/Radarr libraries for space hogs and codec upgrades | [tehrobot/media-optimizer](https://hub.docker.com/r/tehrobot/media-optimizer) |
 | [plex-dupefinder](https://github.com/TehRobot-Assistant/plex-dupefinder) | Find and remove duplicate media files using Plex and Sonarr/Radarr scoring | [tehrobot/plex-dupefinder](https://hub.docker.com/r/tehrobot/plex-dupefinder) |
-| [patch-pulse](https://github.com/TehRobot-Assistant/patch-pulse) | Release notes + CVE context for your Docker container updates | [tehrobot/patchpulse](https://hub.docker.com/r/tehrobot/patchpulse) |
+| [patch-pulse](https://github.com/TehRobot-Assistant/patch-pulse) | Release notes + CVE context for your Docker container updates | [tehrobot/patch-pulse](https://hub.docker.com/r/tehrobot/patch-pulse) |
 
 ## Installation
 
